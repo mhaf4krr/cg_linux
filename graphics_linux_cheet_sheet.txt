@@ -1,0 +1,24 @@
+STEP1: sudo apt-get install build-essential
+
+STEP2: sudo apt install libsdl-image1.2 libsdl-image1.2-dev guile-2.0 guile-2.0-dev libsdl1.2debian libart-2.0-dev libaudiofile-dev pulseaudio-esound-compat libdirectfb-dev libdirectfb-extra libfreetype6-dev libxext-dev x11proto-xext-dev libfreetype6 libaa1 libaa1-dev libslang2-dev libasound2 libasound2-dev
+
+STEP3: if something fails above install aptitute manager using sudo apt install aptitude. And try to download dependencies
+
+STEP4: download libgraph.trz extract it
+
+STEP5: in extracted folder use ./configure --disable-guile
+	sudo make
+	sudo make install
+	sudo cp /usr/local/lib/libgraph.* /usr/lib
+
+STEP6: save the file as cpp
+
+STEP7: 	int gd = DETECT, gm; 
+    	initgraph(&gd, &gm, NULL);
+
+
+STEP8 : use follwing command for compilation 
+	
+	g++ -o xxx.out xxx.cpp -lgraph
+
+
